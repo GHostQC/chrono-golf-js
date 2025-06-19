@@ -1,0 +1,23 @@
+{
+  "name": "tee-snatcher",
+  "version": "0.1.0",
+  "description": "A tool to monitor and snatch available tee times using the Chrono Golf API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js start",
+    "start:dry-run": "node src/index.js start --dry-run",
+    "stop": "node src/index.js stop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chrono-golf",
+    "tee-times",
+    "golf-booking"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrono-golf-api": "workspace:^1.0.0",
+    "dotenv": "^16.0.3"
+  }
+}

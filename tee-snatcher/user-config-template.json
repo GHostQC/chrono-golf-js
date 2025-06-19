@@ -1,0 +1,41 @@
+{
+  "courses": [
+    "course-id-1",
+    "course-id-2"
+  ],
+  "dates": [
+    "2025-06-20",
+    "2025-06-21",
+    "2025-06-22"
+  ],
+  "timeRange": {
+    "earliest": "08:00",
+    "latest": "16:00"
+  },
+  "players": 4,
+  "playerInfo": [
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john@example.com"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "first_name": "Bob",
+      "last_name": "Johnson",
+      "email": "bob@example.com"
+    },
+    {
+      "first_name": "Alice",
+      "last_name": "Brown",
+      "email": "alice@example.com"
+    }
+  ],
+  "paymentToken": "your_payment_token_here",
+  "checkInterval": 300000,
+  "maxAttempts": 50
+}

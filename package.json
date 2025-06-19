@@ -1,0 +1,22 @@
+{
+  "name": "chrono-golf-js",
+  "version": "1.0.0",
+  "description": "A monorepo for Chrono Golf related packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:tee-snatcher": "pnpm --filter tee-snatcher run start",
+    "start:tee-snatcher:dry-run": "pnpm --filter tee-snatcher run start --dry-run",
+    "stop:tee-snatcher": "pnpm --filter tee-snatcher run stop"
+  },
+  "keywords": [
+    "chrono-golf",
+    "lightspeed-golf",
+    "golf-api",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": ["chrono-golf-api", "tee-snatcher"]
+}
