@@ -5,9 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js start",
-    "start:dry-run": "node src/index.js start --dry-run",
+    "start::dry-run": "node src/index.js start --dry-run",
     "stop": "node src/index.js stop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "docker::build": "cd ../ && docker build -t tee-snatcher -f tee-snatcher/Dockerfile ."
   },
   "keywords": [
     "chrono-golf",
@@ -19,5 +20,8 @@
   "dependencies": {
     "chrono-golf-api": "workspace:^1.0.0",
     "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

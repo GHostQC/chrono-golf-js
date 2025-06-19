@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "docs::build": "mkdocs build -c",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:tee-snatcher": "pnpm --filter tee-snatcher run start",
-    "start:tee-snatcher:dry-run": "pnpm --filter tee-snatcher run start --dry-run",
-    "stop:tee-snatcher": "pnpm --filter tee-snatcher run stop"
+    "docker::build": "pnpm --filter tee-snatcher run docker::build",
+    "start": "pnpm --filter tee-snatcher run start",
+    "start::dry-run": "pnpm --filter tee-snatcher run start --dry-run",
+    "stop": "pnpm --filter tee-snatcher run stop",
+    "test": "pnpm -r test"
   },
   "keywords": [
     "chrono-golf",
