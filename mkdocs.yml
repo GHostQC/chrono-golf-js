@@ -1,0 +1,84 @@
+site_name: Chrono Golf JS
+site_description: Documentation for Chrono Golf JS, a monorepo for interacting with the Lightspeed Golf Partner V2 API.
+site_author: GHostQC
+site_url: https://GHostQC.github.io/chrono-golf-js/
+
+# Repository
+repo_name: chrono-golf-js
+repo_url: https://github.com/GHostQC/chrono-golf-js
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Packages:
+    - Chrono Golf API:
+        - Overview: chrono-golf-api/README.md
+    - Tee Snatcher:
+        - Overview: tee-snatcher/README.md
+        - Configuration: tee-snatcher/configuration.md
+        - Usage: tee-snatcher/usage.md
+  - Contributing: contributing.md
+  - License: license.md
+
+# Plugins
+plugins:
+  - search
+  #- macros
+
+# Markdown extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: GHostQC
+      repo: chrono-golf-js
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GHostQC/chrono-golf-js
+  generator: false

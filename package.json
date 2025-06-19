@@ -4,6 +4,7 @@
   "description": "A monorepo for Chrono Golf related packages",
   "main": "index.js",
   "scripts": {
+    "docs::build": "mkdocs build -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:tee-snatcher": "pnpm --filter tee-snatcher run start",
     "start:tee-snatcher:dry-run": "pnpm --filter tee-snatcher run start --dry-run",
