@@ -58,6 +58,7 @@ async function makeApiRequest(method, endpoint, data = null, params = null) {
       if (error.response.data) {
         errorMessage += ` Details: ${JSON.stringify(error.response.data)}`;
       }
+      return error.response; // Return the error response for caller to handle
     }
     console.error(errorMessage);
     throw new Error(errorMessage);

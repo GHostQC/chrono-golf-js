@@ -14,6 +14,9 @@ const { makeApiRequest, extractPaginationInfo } = require('./utils');
 async function getCourses(params = {}) {
   try {
     const response = await makeApiRequest('GET', '/courses', null, params);
+    if (response && response.status && response.status >= 400) {
+      throw new Error(`Failed to fetch courses: ${response.statusText || 'Unknown error'}`);
+    }
     return {
       courses: response.data || response,
       pagination: extractPaginationInfo(response),
@@ -35,6 +38,9 @@ async function getCourseDetails(courseId) {
   
   try {
     const response = await makeApiRequest('GET', `/courses/${courseId}`);
+    if (response && response.status && response.status >= 400) {
+      throw new Error(`Failed to fetch course details: ${response.statusText || 'Unknown error'}`);
+    }
     return response.data || response;
   } catch (error) {
     throw new Error(`Failed to retrieve course details: ${error.message}`);
@@ -53,6 +59,9 @@ async function getCourseFacilities(courseId) {
   
   try {
     const response = await makeApiRequest('GET', `/courses/${courseId}/facilities`);
+    if (response && response.status && response.status >= 400) {
+      throw new Error(`Failed to fetch course facilities: ${response.statusText || 'Unknown error'}`);
+    }
     return response.data || response;
   } catch (error) {
     throw new Error(`Failed to retrieve course facilities: ${error.message}`);

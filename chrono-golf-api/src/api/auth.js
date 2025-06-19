@@ -80,4 +80,21 @@ class AuthManager {
   }
 }
 
-module.exports = new AuthManager();
+module.exports = {
+  getAccessToken: async function() {
+    const auth = new AuthManager();
+    return await auth.getAccessToken();
+  },
+  isTokenValid: function() {
+    const auth = new AuthManager();
+    return auth.isTokenValid();
+  },
+  requestNewToken: async function() {
+    const auth = new AuthManager();
+    return await auth.requestNewToken();
+  },
+  resetToken: function() {
+    const auth = new AuthManager();
+    auth.resetToken();
+  }
+};
